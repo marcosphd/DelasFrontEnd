@@ -1,4 +1,4 @@
-<div class="container-fuid">
+<div class="container-fluid">
 
     <div class="row d-flex align-items-center">
 
@@ -36,11 +36,11 @@
                                     <div class="input-boxes">
                                         <div class="input-box">
                                             <i class="fas fa-envelope"></i>
-                                            <input [(ngModel)]='userLogin.usuario' type="text" name="usuaLogin" id="usuaLogin" placeholder="Digite seu usuário" required>
+                                            <input type="text" name="usuaLogin" id="usuaLogin" placeholder="Digite seu usuário" required>
                                         </div>
                                         <div class="input-box">
                                             <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='userLogin.senha' type="password" name="senhaLogin" id="senhaLogin" placeholder="Digite sua senha" required>
+                                            <input type="password" name="senhaLogin" id="senhaLogin" placeholder="Digite sua senha" required>
                                         </div>
                                         <div class="text"><a href="#">Esqueceu a senha?</a></div>
                                         <div class="button input-box">
@@ -53,85 +53,84 @@
                                 <div class="signup-form">
                                     <div class="title">Cadastro</div>
                                     <div class="input-boxes">
-                                        <div class="input-box">
-                                            <i class="fas fa-user"></i>
-                                            <input [(ngModel)]='usuario.nome'  type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
-                                        </div>
 
-                                        <i class="fas fa-lock">Como você se identifica?</i>
-                                        <div class="input-box">
+                                        <form class="row g-3">
+                                            <div class="col-md-6 me-4">
+                                              <label for="inputNome" class="form-label">Nome</label>
+                                              <input [(ngModel)]='usuario.nome' type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome">
+                                            </div>
+                                            
+                                            <div class="col-md-5">
+                                              <label for="inputEmail" class="form-label">Email</label>
+                                              <input [(ngModel)]='usuario.email'  type="email" name="email" class="form-control" id="email" placeholder="Digite seu email">
+                                            </div>
 
-                                            <select class="form-control form-control-sm" name="genero" id="genero" (change)='generos($event)'>
-                                                <option>Selecione...</option>
-                                                <option value="mulherc">Mulher cisgenêro</option>
-                                                <option value="mulhert">Mulher transgenêro</option>
-                                                <option value="homemc">Homem cisgenêro</option>
-                                                <option value="homemt">Homem transgenêro</option>
-                                            </select>
-                                        </div>
+                                            <div class="col-md-6 me-4">
+                                                <label for="inputData" class="form-label">Data de nascimento</label>
+                                                <input [(ngModel)]='usuario.dataNasc' type="date" name="dataNasc" class="form-control" id="dataNasc">
+                                              </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.dataNasc'type="date" name="dataNasc" id="dataNasc" placeholder="Digite sua data de nascimento" required>
-                                        </div>
+                                              <div class="col-md-5">
+                                                <label for="inputTelefone" class="form-label">Telefone</label>
+                                                <input [(ngModel)]='usuario.telefone' type="tel" name="telefone" class="form-control" id="telefone" placeholder="Digite seu telefone">
+                                              </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.email' type="email" name="email" id="name" placeholder="Digite seu email" required>
-                                        </div>
+                                              <div class="col-md-6 me-4">
+                                                <label for="inputGenero" class="form-label">Genero</label>
+                                                <select id="genero" class="form-select" name="genero" (change)='generos($event)'>
+                                                  <option selected>Selecione</option>
+                                                  <option>Mulher cisgenero</option>
+                                                  <option>Mulher trânsgenero</option>
+                                                  <option>Homen cisgenero</option>
+                                                  <option>Homen transgenero</option>
+                                                </select>
+                                              </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.usuario' type="text" name="usuario" id="usuario" placeholder="Digite seu usuário" required>
-                                        </div>
+                                              <div class="col-md-5">
+                                                <label for="inputUsuario" class="form-label">Usuário</label>
+                                                <input [(ngModel)]='usuario.usuario' type="text" class="form-control" name="usuario" id="usuario" placeholder="Digite seu usuario">
+                                              </div>
+                                              
+                                              
+                                            <div class="col-md-6 me-4">
+                                              <label for="inputUrlPerfil" class="form-label">Url perfil</label>
+                                              <input [(ngModel)]='usuario.fotoPerfil'  type="text" class="form-control" id="urlFoto" name="urlFoto" placeholder="Insira sua foto">
+                                            </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.telefone' type="text" name="telefone" id="telefone" placeholder="Digite seu telefone" required>
-                                        </div>
+                                            <div class="col-md-5">
+                                                <label for="inputUrlSite" class="form-label">Url site</label>
+                                                <input [(ngModel)]='usuario.url'  type="text" name="urlSite" class="form-control" id="urlSite" placeholder="Insira seu site">
+                                              </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.fotoPerfil'type="url" name="url" id="urlfoto" placeholder="Insira a url da sua foto de perfil" required>
-                                        </div>
+                                              <div class="col-12">
+                                                <label for="inputEndereco" class="form-label">Endereço</label>
+                                                <input [(ngModel)]='usuario.endereco'  type="text" name="endereco" class="form-control" id="endereco" placeholder="Digite seu endereço">
+                                              </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.endereco' type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required>
-                                        </div>
+                                              <div class="col-12">
+                                                <label for="inputBio" class="form-label">Biografia</label>
+                                                <input [(ngModel)]='usuario.bio' type="text" name="bio" class="form-control" id="bio" placeholder="Conte um pouco sobre você">
+                                              </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.url' type="url" name="url" id="urlsite" placeholder="Insira aqui a url do seu site" required>
-                                        </div>
+                                              <div class="col-md-6 me-4">
+                                                <label for="inputSenha" class="form-label">Senha</label>
+                                                <input (input)='confirmSenha($event)'  type="password" class="form-control" name="senha" id="senha" placeholder="Insira sua senha">
+                                              </div>
+  
+                                              <div class="col-md-5">
+                                                  <label for="inputConfirmarSenha" class="form-label">Confirmar senha</label>
+                                                  <input [(ngModel)]='usuario.senha'  type="password" class="form-control" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                                                </div>
 
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.bio' type="text" name="bio" id="bio" placeholder="Digite sua bio" required>
-                                        </div>
-
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input (input)='confirmSenha($event)' type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                                        </div>
-
-                                        <div class="input-box">
-                                            <i class="fas fa-lock"></i>
-                                            <input [(ngModel)]='usuario.senha' type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirmar senha" required>
-                                        </div>
-
-                                        <!--
-                                            Example 1: <input [(ngModel)]="person.firstName" name="first">
-                                            Example 2: <input [(ngModel)]="person.firstName" [ngModelOptions]="
-                                        -->
-
-                                        <i class="fas fa-lock">Selecione seu tipo de usuário</i>
+                                                <i class="fas fa-lock">Selecione seu tipo de usuário</i>
                                         <select class="form-control" name="tipoUser" id="tipoUser" (change)='tipoUser($event)'>
                                             <option> Selecione um tipo de usuário</option>
                                             <option value="normal">Padrão</option>
                                             <option value="normal">Empreendedora</option>
                                             <option value="adm">Administrador</option>
                                         </select>
+                                            </form>
+
 
                                         <div class="button input-box">
                                             <input class="me-4" type="submit" value="cancelar" routerLink="/home">

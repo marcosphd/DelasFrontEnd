@@ -10,8 +10,9 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { HomeComponent } from './home/home.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LogarComponent } from './logar/logar.component';
-import { InicioComponent } from './inicio/inicio.component';
 import { ContatoComponent } from './contato/contato.component';
+import { FeedComponent } from './feed/feed.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
@@ -22,8 +23,9 @@ import { ContatoComponent } from './contato/contato.component';
     HomeComponent,
     CadastrarComponent,
     LogarComponent,
-    InicioComponent,
-    ContatoComponent
+    ContatoComponent,
+    FeedComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
