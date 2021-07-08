@@ -66,7 +66,7 @@ export class LogarComponent implements OnInit {
       environment.usuario = this.userLogin.usuario     
       environment.id = this.userLogin.id
 
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/feed'])
     }, erro =>{
       if(erro.status == 500){
         alert('Usuário ou senha estão incorretos!')

@@ -36,11 +36,11 @@
                                     <div class="input-boxes">
                                         <div class="input-box">
                                             <i class="fas fa-envelope"></i>
-                                            <input type="text" name="usuaLogin" id="usuaLogin" placeholder="Digite seu usuário" required>
+                                            <input [(ngModel)]='userLogin.usuario' type="text" name="usuaLogin" id="usuaLogin" placeholder="Digite seu usuário" required>
                                         </div>
                                         <div class="input-box">
                                             <i class="fas fa-lock"></i>
-                                            <input type="password" name="senhaLogin" id="senhaLogin" placeholder="Digite sua senha" required>
+                                            <input [(ngModel)]='userLogin.senha' type="password" name="senhaLogin" id="senhaLogin" placeholder="Digite sua senha" required>
                                         </div>
                                         <div class="text"><a href="#">Esqueceu a senha?</a></div>
                                         <div class="button input-box">
