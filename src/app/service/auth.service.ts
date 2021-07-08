@@ -21,4 +21,9 @@ export class AuthService {
     return this.http.post<Usuario>('https://delasredesocial.herokuapp.com/usuarios/cadastrar', usuario)
     
   }
+
+
+  getByIdUser(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`https://delasredesocial.herokuapp.com/usuarios/${id}`)
+  }
 }

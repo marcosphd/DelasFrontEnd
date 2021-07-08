@@ -4,8 +4,8 @@
       <div class="col-md-12">
   
   
-        <a routerLink="/inicio" class="text-left ">
-          <i class="fa fa-angle-double-left" aria-hidden="true"></i> inicio
+        <a routerLink="/feed" class="text-left ">
+          <i class="fa fa-angle-double-left" aria-hidden="true"></i> feed
         </a>
   
         <h1 class="fs-54 text-center">Temas</h1>
@@ -32,7 +32,7 @@
   
     <div class="row mt-5">
       <div class="col-md-12 text-light">
-        <h2 class="text-center text-dark"> Todos os Temas</h2>
+        <h2 class="text-center text-dark"> Todas as Categorias</h2>
       </div>
     </div>
   
@@ -43,7 +43,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Descrição</th>
+        <th scope="col">categorias</th>
         <th scope="col" class="text-right">Modificações</th>
   
       </tr>
@@ -54,8 +54,8 @@
         <th>{{temas.id}}</th>
         <td>{{temas.categorias}}</td>
         <td class="d-flex justify-content-end">
-          <button class="btn btn-outline-info mr-3"> ✏️</button>
-          <button class="btn btn-outline-danger">❌</button>
+          <button class="btn btn-outline-info mr-3" [routerLink]="['/tema-edit', temas.id]"> ✏️</button>
+          <button class="btn btn-outline-danger" [routerLink]="['/tema-delete', temas.id]">❌</button>
         </td>
       </tr>
       

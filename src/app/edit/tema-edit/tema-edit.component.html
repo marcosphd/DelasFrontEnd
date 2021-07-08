@@ -1,0 +1,26 @@
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-darck">Atualizar Categorias</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            
+            <div class="form-goup">
+                 <label for="categorias">Descrição das Categorias:</label>
+                 <input type="text" class="form-control" id="categorias" [(ngModel)]='tema.categorias'>
+            </div>
+
+            <div class= "d-flex justify-content-center mt-3"> 
+                <button class="btn btn-outline-danger mr-4" routerLink='/tema'>Cancelar</button>
+                <button class="btn btn-outline-success" (click)='atualizar()'>Atualizar</button>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
