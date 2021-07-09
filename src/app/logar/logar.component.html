@@ -29,32 +29,51 @@
                                 </div>
                             </div>
                         </div>
+
                         <form action="#">
                             <div class="form-content">
                                 <div class="login-form">
                                     <div class="title">Entrar</div>
                                     <div class="input-boxes">
+
                                         <div class="input-box">
                                             <i class="fas fa-envelope"></i>
                                             <input [(ngModel)]='userLogin.usuario' type="text" name="usuaLogin" id="usuaLogin" placeholder="Digite seu usuário" required>
                                         </div>
+
                                         <div class="input-box">
                                             <i class="fas fa-lock"></i>
                                             <input [(ngModel)]='userLogin.senha' type="password" name="senhaLogin" id="senhaLogin" placeholder="Digite sua senha" required>
                                         </div>
+
                                         <div class="text"><a href="#">Esqueceu a senha?</a></div>
+                                        
                                         <div class="button input-box">
                                             <input type="submit" (click)='entrar()' value="Entrar">
                                         </div>
-                                        <div class="text sign-up-text">Não tem conta? <label
-                                                for="flip">Cadastre-se</label></div>
-                                    </div>
+
+                                        <div class="text sign-up-text">Não tem conta? 
+                                            <label for="flip" id="#Pg_1"> Usuario padrão</label>
+                                        </div>
+
+                                        <div class="text sign-up-text">Não tem conta? 
+                                            <label for="flip"> Empreendedora</label>
+                                        </div>
+
+                                        <div class="text sign-up-text">Não tem conta? 
+                                            <label for="flip"> Adiministra</label>
+                                        </div>
+                                                
+                                        </div>
+                                    
                                 </div>
+
                                 <div class="signup-form">
                                     <div class="title">Cadastro</div>
                                     <div class="input-boxes">
 
                                         <form class="row g-3">
+
                                             <div class="col-md-6 me-4">
                                               <label for="inputNome" class="form-label">Nome</label>
                                               <input [(ngModel)]='usuario.nome' type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome">
@@ -65,7 +84,7 @@
                                               <input [(ngModel)]='usuario.email'  type="email" name="email" class="form-control" id="email" placeholder="Digite seu email">
                                             </div>
 
-                                            <div class="col-md-6 me-4">
+                                              <div class="col-md-6 me-4">
                                                 <label for="inputData" class="form-label">Data de nascimento</label>
                                                 <input [(ngModel)]='usuario.dataNasc' type="date" name="dataNasc" class="form-control" id="dataNasc">
                                               </div>
@@ -121,15 +140,8 @@
                                                   <label for="inputConfirmarSenha" class="form-label">Confirmar senha</label>
                                                   <input [(ngModel)]='usuario.senha'  type="password" class="form-control" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
                                                 </div>
-
-                                                <i class="fas fa-lock">Selecione seu tipo de usuário</i>
-                                        <select class="form-control" name="tipoUser" id="tipoUser" (change)='tipoUser($event)'>
-                                            <option> Selecione um tipo de usuário</option>
-                                            <option value="normal">Padrão</option>
-                                            <option value="normal">Empreendedora</option>
-                                            <option value="adm">Administrador</option>
-                                        </select>
-                                            </form>
+                                     
+                                        </form>
 
 
                                         <div class="button input-box">
@@ -140,8 +152,34 @@
                                                 login</label></div>
                                     </div>
                                 </div>
+
                             </div>
                         </form>
+                    
+                        <input type="checkbox" id="flip">
+                        <div class="cover">
+                            <div class="front">
+                                <img src="https://images.pexels.com/photos/3810796/pexels-photo-3810796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                                <div class="text">
+                                    <span class="text-1">Delas <br> Conectando empreendedoras</span>
+                                    <span class="text-2">Faça seu login</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <img class="backImg"
+                                    src="https://images.pexels.com/photos/5685865/pexels-photo-5685865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                                <div class="text">
+                                    <span class="text-1">Ei, mulher, vamos subir mais um degrau?<br> só mais um
+                                        passo</span>
+                                    <span class="text-2">Vamos começar!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
                     </div>
                 </div>
             </div>
